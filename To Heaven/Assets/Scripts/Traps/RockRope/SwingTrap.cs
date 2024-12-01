@@ -20,7 +20,7 @@ public class SwingTrap : MonoBehaviour
         float angle = Mathf.Sin(time * swingSpeed) * swingAngle;
 
         // Áp dụng góc quay cho quả cầu
-        transform.localRotation = startRotation * Quaternion.Euler(angle, 0, 0);
+        transform.localRotation = startRotation * Quaternion.Euler(0, 0, angle);
 
         // Tăng thời gian
         time += Time.deltaTime;

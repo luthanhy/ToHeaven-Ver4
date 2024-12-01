@@ -19,13 +19,13 @@ public class PillarPathBuilder : MonoBehaviour
         Vector3 currentPosition = transform.position;
         Vector3 direction = transform.forward.normalized; // Hướng đi của đường
 
-        for (int i = 0; i < pillarCount; i++)
+        for (int i = 0; i < pillarCount; i++)   
         {
             // Tạo góc nghiêng ngẫu nhiên
             float tiltAngle = Random.Range(-maxTiltAngle, maxTiltAngle);
 
             // Áp dụng góc nghiêng vào trục Z để nghiêng trái phải
-            Quaternion tiltRotation = Quaternion.Euler(tiltAngle, 0, 0);
+            Quaternion tiltRotation = Quaternion.Euler(0, 0, tiltAngle);
 
             // Tạo trụ
             GameObject pillar = Instantiate(pillarPrefab, currentPosition, tiltRotation, transform);
