@@ -1,0 +1,45 @@
+# Thư mục hệ thống
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+MemoryCaptures/
+
+# Visual Studio / MonoDevelop files
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Thư mục Cache
+UnityPackageManager/
+Packages/com.unity.package-manager-ui/
+
+# File dành riêng cho Unity
+*.pidb.meta
+*.pdb
+*.mdb
+*.unitypackage
+
+# Khác
+*.swp
+*.lock
+*.log
+*.bak
+*.orig
+*.tmp
+
+# File hệ điều hành
+.DS_Store
+Thumbs.db
+To Heaven/.vsconfig
+To Heaven/.vs/
