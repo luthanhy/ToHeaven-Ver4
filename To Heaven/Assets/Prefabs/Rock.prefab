@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6025704854779029262}
   - component: {fileID: 1557343954612680393}
   - component: {fileID: 770075169784310695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: -8486852017652334165, guid: 596cbba7822f8264699a06715c3da221, type: 3}
 --- !u!1 &8581830109707346652
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8645601462591524292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}

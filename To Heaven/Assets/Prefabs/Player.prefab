@@ -170,7 +170,7 @@ MonoBehaviour:
   speed: 6
   runSpeed: 12
   gravity: -19.62
-  jumpHeight: 8
+  jumpHeight: 4
   groundCheck: {fileID: 6403687746494792789}
   groundDistance: 0.4
   groundMask:
