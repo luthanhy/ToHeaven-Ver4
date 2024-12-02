@@ -40,10 +40,12 @@ public class BouncingPad : MonoBehaviour
     {
         if (player != null)
         {
+            // Lấy hướng mặt của lò xo và tính toán lực bật lên
             Vector3 bounceDirection = transform.up * bounceForceUp + transform.forward * bounceForceForward;
             player.LaunchPlayer(bounceDirection);
         }
     }
+
 
     void Update()
     {
