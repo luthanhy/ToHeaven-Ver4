@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 419393246218407829}
   - component: {fileID: 6836466491849098722}
   - component: {fileID: 6649820838905811429}
+  - component: {fileID: 2394720941823169380}
   m_Layer: 8
   m_Name: Column
   m_TagString: Untagged
@@ -105,9 +106,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 2.1862473
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.00000003973643, y: -0.093123674, z: -0.000000079472855}
 --- !u!114 &6649820838905811429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +122,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushDistance: 8
-  speed: 20
+  speed: 50
   minWaitTime: 0.5
   maxWaitTime: 1.5
+--- !u!114 &2394720941823169380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417292928751534928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5862d60200f318f45b547d99b667ecd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 100
+  upwardForce: 10
