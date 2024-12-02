@@ -101,6 +101,10 @@ public class PlayerMovement : MonoBehaviour
 
         // Di chuyển nhân vật
         controller.Move(totalMovement);
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GetComponent<CheckpointManager>().Respawn();
+        }
     }
     void HandleGroundCheck()
     {
