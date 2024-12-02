@@ -13,7 +13,10 @@ public class RandomPathGenerator : MonoBehaviour
     void Start()
     {
         Vector3 spawnPosition = startPoint != null ? startPoint.position : transform.position;
-        Quaternion spawnRotation = Quaternion.identity;
+        Quaternion spawnRotation = startPoint != null ? startPoint.rotation : Quaternion.identity;
+        
+        // Tính toán hướng ban đầu dựa trên hướng của startPoint
+        Vector3 direction = -startPoint.forward;
 
         for (int i = 0; i < numberOfModels; i++)
         {
@@ -25,9 +28,9 @@ public class RandomPathGenerator : MonoBehaviour
             float randomRotation = Random.Range(rotationRange.x, rotationRange.y); // Xoay dọc
             model.transform.Rotate(randomTilt, 0, randomRotation); // Chỉnh đúng thứ tự trục xoay
 
-            // Cập nhật vị trí cho model tiếp theo
-            spawnPosition += -model.transform.forward * forwardStep; // Tiến tới phía trước
-            spawnPosition += Vector3.up * verticalStep;             // Đi lên trên
+            // Cập nhật vị trí cho model tiếp theo theo hướng từ núi ra màn hình
+            spawnPosition += -(direction * forwardStep);
+            spawnPosition += Vector3.up * verticalStep; // Đi lên trên
         }
     }
 }
