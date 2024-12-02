@@ -333,14 +333,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isFalling", false);
     }
 
-    public void LaunchPlayer(float forceUp, float forceForward)
+    public void LaunchPlayer(Vector3 bounceForce)
     {
-        // Áp dụng lực đẩy lên trên
-        velocity.y = Mathf.Sqrt(forceUp * -2f * gravity);
-
-        // Thêm lực đẩy về phía trước dựa trên hướng hiện tại của nhân vật
-        Vector3 forwardDirection = transform.forward * forceForward;
-        moveDirection = forwardDirection;
+        // Áp dụng lực đẩy dựa trên hướng và độ lớn của lực
+        velocity = bounceForce;
 
         // Kích hoạt animation rơi
         animator.SetBool("isFalling", true);
