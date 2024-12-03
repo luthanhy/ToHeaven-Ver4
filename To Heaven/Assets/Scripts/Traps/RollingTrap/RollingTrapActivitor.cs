@@ -1,24 +1,28 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class RollingTrapActivator : MonoBehaviour
 {
-    public GameObject trap; // Bẫy cần hiển thị
+    public List<GameObject> traps; // Danh sách các bẫy cần hiển thị
 
-
-    private RollingTrap rollingTrap; // Biến lưu trữ script RollingTrap
+    private List<RollingTrap> rollingTraps = new List<RollingTrap>(); // Danh sách lưu trữ script RollingTrap
 
     private void Start()
     {
-        if (trap != null)
+        foreach (GameObject trap in traps)
         {
-            // Ẩn bẫy khi bắt đầu game
-            trap.SetActive(false);
-
-            // Lấy script RollingTrap từ bẫy
-            rollingTrap = trap.GetComponent<RollingTrap>();
-            if (rollingTrap != null)
+            if (trap != null)
             {
-                rollingTrap.enabled = false; // Vô hiệu hóa script ban đầu
+                // Ẩn bẫy khi bắt đầu game
+                trap.SetActive(false);
+
+                // Lấy script RollingTrap từ bẫy
+                RollingTrap rollingTrap = trap.GetComponent<RollingTrap>();
+                if (rollingTrap != null)
+                {
+                    rollingTrap.enabled = false; // Vô hiệu hóa script ban đầu
+                    rollingTraps.Add(rollingTrap); // Thêm vào danh sách rollingTraps
+                }
             }
         }
     }
@@ -28,14 +32,16 @@ public class RollingTrapActivator : MonoBehaviour
         // Kích hoạt bẫy khi người chơi đi vào Trigger Zone
         if (other.CompareTag("Player"))
         {
-            if (trap != null)
+            for (int i = 0; i < traps.Count; i++)
             {
-                trap.SetActive(true); // Hiển thị bẫy
-
-                if (rollingTrap != null)
+                if (traps[i] != null)
                 {
-                    rollingTrap.enabled = true; // Kích hoạt script RollingTrap
-                  
+                    traps[i].SetActive(true); // Hiển thị bẫy
+
+                    if (rollingTraps[i] != null)
+                    {
+                        rollingTraps[i].enabled = true; // Kích hoạt script RollingTrap
+                    }
                 }
             }
         }
