@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1928333330396520889}
   m_Layer: 8
   m_Name: Land
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5461320835613783329, guid: c50a2cf4a9fed424a9f2cf30304e8af5, type: 3}
 --- !u!1 &8827516860608569921
