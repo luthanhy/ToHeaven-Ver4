@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -115,13 +116,9 @@ public class PlayerMovement : MonoBehaviour
     if (Physics.SphereCast(transform.position, controller.radius, Vector3.down, out hit, raycastDistance, groundMask))
     {
         isGrounded = true;
-
-        // Kiểm tra nếu va chạm với layer "ground" để dừng chuyển động
-        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("ground"))
-        {
-            moveDirection = Vector3.zero;
+        if(hit.collider.CompareTag("MapDie")){
+            Respawn();
         }
-
         // Kiểm tra nếu đang đứng trên mặt phẳng di chuyển
         if (hit.collider.CompareTag("MovingPlatform"))
         {
@@ -133,6 +130,9 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSwingPlatform = hit.collider.GetComponent<SwingColumn>();
             currentMovingPlatform = null;
+        }
+        else if(hit.collider.CompareTag("Checkpoint")){
+            startingPosition = transform.position;
         }
         else
         {
@@ -166,7 +166,14 @@ public class PlayerMovement : MonoBehaviour
     wasGrounded = isGrounded;
 }
 
+     IEnumerator RespawnWithDelay()
+    {
+        // Chờ một khoảng thời gian (2 giây)
+        yield return new WaitForSeconds(2f);
 
+        // Sau khi hết thời gian delay, gọi phương thức Respawn
+        Respawn();
+    }
     // Xử lý chuyển động của nhân vật
     void HandleMovement()
     {

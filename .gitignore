@@ -43,3 +43,7 @@ Packages/com.unity.package-manager-ui/
 Thumbs.db
 To Heaven/.vsconfig
 To Heaven/.vs/
+To Heaven/Assets/Editor Default Resources/Firebase/
+To Heaven/Assets/Firebase/
+To Heaven/Assets/ExternalDependencyManager/
+To Heaven/Assets/Plugins/
