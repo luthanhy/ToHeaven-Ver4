@@ -42,6 +42,8 @@ public class TerrainChunk {
 
 
 		meshObject = new GameObject("Terrain Chunk");
+		meshObject.layer = LayerMask.NameToLayer("Map");
+		meshObject.tag = "MapDie"; 		
 		meshRenderer = meshObject.AddComponent<MeshRenderer>();
 		meshFilter = meshObject.AddComponent<MeshFilter>();
 		meshCollider = meshObject.AddComponent<MeshCollider>();

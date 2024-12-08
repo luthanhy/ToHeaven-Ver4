@@ -7,6 +7,7 @@ TagManager:
   - SwingPlatform
   - MovingPlatform
   - Checkpoint
+  - MapDie
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Map
   - 
   - 
   - 
