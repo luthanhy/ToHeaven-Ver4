@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 596cbba7822f8264699a06715c3da221, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 86230075f4cb2b34fbe274c679656f59, type: 2}
+      objectReference: {fileID: 2100000, guid: 30148ed8c7e2dfa4fa51f6675d11cb91, type: 2}
     - target: {fileID: 919132149155446097, guid: 596cbba7822f8264699a06715c3da221, type: 3}
       propertyPath: m_Name
       value: ClassicColumnStoneBlocks 1
